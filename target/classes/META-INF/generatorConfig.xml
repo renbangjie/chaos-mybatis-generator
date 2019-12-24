@@ -1,0 +1,6 @@
+<context connectionURL="jdbc:mysql://xxx:3306/cupid?characterEncoding=utf-8"
+  user="xxx" password="xxx">
+
+  <table tableName="worker_node" domainName="WorkerNode" packages="com.github.chaos.test" />
+
+</context>
