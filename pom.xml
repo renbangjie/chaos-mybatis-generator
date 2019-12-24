@@ -6,7 +6,7 @@
 
   <groupId>io.github.renbangjie</groupId>
   <artifactId>chaos-mybatis-generator</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0.RELEASE</version>
   <name>chaos-mybatis-generator</name>
   <packaging>maven-plugin</packaging>
 
@@ -108,11 +108,11 @@
 
   <distributionManagement>
     <repository>
-      <id>sonatype</id>
+      <id>oss</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
     </repository>
     <snapshotRepository>
-      <id>sonatype</id>
+      <id>oss</id>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </snapshotRepository>
   </distributionManagement>
