@@ -10,11 +10,47 @@
   <name>chaos-mybatis-generator</name>
   <packaging>maven-plugin</packaging>
 
+  <description>
+    Code generator, used to generate SQL statements and some general methods for
+    applications that depend on mybatis framework
+  </description>
+
+  <url>https://github.com/renbangjie/chaos-mybatis-generator</url>
+
+  <scm>
+    <connection>scm:git:https://github.com/renbangjie/chaos-mybatis-generator.git</connection>
+    <url>https://github.com/renbangjie/chaos-mybatis-generator.git</url>
+    <developerConnection>scm:git:https://github.com/renbangjie/chaos-mybatis-generator.git
+    </developerConnection>
+  </scm>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>license</comments>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>renbangjie</id>
+      <name>renbangjie</name>
+      <email>renbangjie@126.com</email>
+      <organization>vesoft</organization>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!--依赖jdk版本-->
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <!--依赖插件版本-->
     <version.maven.plugin.api>3.5.4</version.maven.plugin.api>
     <version.maven.plugin.annotations>3.5.2</version.maven.plugin.annotations>
@@ -133,6 +169,19 @@
             <id>attach-sources</id>
             <goals>
               <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
             </goals>
           </execution>
         </executions>
