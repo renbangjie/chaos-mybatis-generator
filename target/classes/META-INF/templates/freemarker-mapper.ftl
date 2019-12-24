@@ -2,13 +2,13 @@
 package ${packages};
 
 <#list importClassName as item>
-import ${item};
+  import ${item};
 </#list>
 
 /**
 * <#if desc??>
-*  ${desc}
-* </#if>
+  *  ${desc}
+  * </#if>
 * @author ${author}
 * @date ${.now}
 */
@@ -16,30 +16,30 @@ import ${item};
 public interface ${simpleName} {
 
   /**
-   * 根据主键查询
-   *
-   * @param ${primaryKey.propertyName} 主键
-   * @return ${classT} 数据模型
-   * @date ${.now}
-   */
+  * 根据主键查询
+  *
+  * @param ${primaryKey.propertyName} 主键
+  * @return ${classT} 数据模型
+  * @date ${.now}
+  */
   ${classT} selectByPrimaryKey(${primaryKey.dataType} ${primaryKey.propertyName});
 
   /**
-   * 插入新数据，返回受影响行数
-   *
-   * @param ${propertyName} 数据模型
-   * @return int 受影响行数
-   * @date ${.now}
-   */
+  * 插入新数据，返回受影响行数
+  *
+  * @param ${propertyName} 数据模型
+  * @return int 受影响行数
+  * @date ${.now}
+  */
   int insert(${classT} ${propertyName});
 
   /**
-   * 批量插入多条数据,返回受影响行数
-   *
-   * @param list 数据模型集合
-   * @return int 受影响行数
-   * @date ${.now}
-   */
+  * 批量插入多条数据,返回受影响行数
+  *
+  * @param list 数据模型集合
+  * @return int 受影响行数
+  * @date ${.now}
+  */
   int insertBatch(List<${classT}> list);
 
   /**

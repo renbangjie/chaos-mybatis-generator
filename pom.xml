@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.chaos</groupId>
+  <groupId>io.github.renbangjie</groupId>
   <artifactId>chaos-mybatis-generator</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>chaos-mybatis-generator</name>
@@ -105,6 +105,17 @@
       <version>${version.alibaba.fastjson}</version>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>sonatype</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </repository>
+    <snapshotRepository>
+      <id>sonatype</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <build>
     <plugins>
