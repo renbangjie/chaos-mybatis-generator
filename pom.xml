@@ -6,7 +6,7 @@
 
   <groupId>io.github.renbangjie</groupId>
   <artifactId>chaos-mybatis-generator</artifactId>
-  <version>1.0.0.RELEASE</version>
+  <version>1.0.1.RELEASE</version>
   <name>chaos-mybatis-generator</name>
   <packaging>maven-plugin</packaging>
 
