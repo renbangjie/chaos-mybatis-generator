@@ -1,16 +1,16 @@
 package ${packages};
 
 <#list importClassName as item>
-  import ${item};
+import ${item};
 </#list>
 
 /**
-* <#if desc??>
-  *	${desc}
-  * </#if>
-* @author ${author}
-* @date ${.now}
-*/
+ * <#if desc??>
+ *	${desc}
+ * </#if>
+ * @author ${author}
+ * @date ${.now}
+ */
 @Getter
 @Setter
 public class ${simpleName} implements ${interfaceClassName} {
@@ -21,8 +21,8 @@ public class ${simpleName} implements ${interfaceClassName} {
   <#list fieldModels as field>
     <#if field.desc??>
   /**
-  * ${field.desc}
-  */
+   * ${field.desc}
+   */
     </#if>
   private ${field.typeName} ${field.name};
 

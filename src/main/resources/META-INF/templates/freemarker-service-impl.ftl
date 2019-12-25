@@ -4,17 +4,17 @@ package ${packages};
 
 <#if importClassName??>
 	<#list importClassName as item>
-		import ${item};
+import ${item};
 	</#list>
 </#if>
 
 /**
-* <#if desc??>
-	*  ${desc}
-	* </#if>
-* @author ${author}
-* @date ${.now}
-*/
+ * <#if desc??>
+ *  ${desc}
+ * </#if>
+ * @author ${author}
+ * @date ${.now}
+ */
 @Service("${propertyName + 'Service'}")
 public class ${simpleName} implements ${interfaceClassName} {
 
@@ -32,23 +32,23 @@ public class ${simpleName} implements ${interfaceClassName} {
 <#--	}-->
 
 	/**
-	* 根据主键获取该主键对应的数据详情
-	*
-	* @param ${primaryKey.propertyName} 主键
-	* @return ${classT} 数据模型
-	* @date ${.now}
-	*/
+	 * 根据主键获取该主键对应的数据详情
+	 *
+	 * @param ${primaryKey.propertyName} 主键
+	 * @return ${classT} 数据模型
+	 * @date ${.now}
+	 */
 	@Override
 	public ${classT} selectByPrimaryKey(${primaryKey.dataType} ${primaryKey.propertyName}) {
 		return ${mapperName}.selectByPrimaryKey(${primaryKey.propertyName});
 	}
 
 	/**
-	* 更新数据库中的一条记录
-	*
-	* @param ${propertyName} 数据模型
-	* @date ${.now}
-	*/
+	 * 更新数据库中的一条记录
+	 *
+	 * @param ${propertyName} 数据模型
+	 * @date ${.now}
+	 */
 	@Override
 	@Transactional(rollbackFor = Exception.class)
 	public void updateByPrimaryKey(${classT} ${propertyName}) {
@@ -58,11 +58,11 @@ public class ${simpleName} implements ${interfaceClassName} {
 	}
 
 	/**
-	* 根据主键从数据库中删除一条记录
-	*
-	* @param ${primaryKey.propertyName} 主键
-	* @date ${.now}
-	*/
+	 * 根据主键从数据库中删除一条记录
+	 *
+	 * @param ${primaryKey.propertyName} 主键
+	 * @date ${.now}
+	 */
 	@Override
 	@Transactional(rollbackFor = Exception.class)
 	public void deleteByPrimaryKey(${primaryKey.dataType} ${primaryKey.propertyName}) {
@@ -120,8 +120,8 @@ public class ${simpleName} implements ${interfaceClassName} {
 	<#list fieldModels as being>
 		<#if being.desc??>
 	/**
-	* ${being.desc}
-	*/
+	 * ${being.desc}
+	 */
 		</#if>
 	${being.annotation}
 	${being.accessModifier} ${being.typeName} ${being.name};
