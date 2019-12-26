@@ -1,6 +1,11 @@
-<context connectionURL="jdbc:mysql://xxx:3306/cupid?characterEncoding=utf-8"
-  user="xxx" password="xxx">
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+    connectionURL="jdbc:mysql://xxxx:3306/cupid?characterEncoding=utf8"
+    userId="xxxx"
+    password="xxxx"/>
 
   <table tableName="worker_node" domainName="WorkerNode" packages="com.github.chaos.test"/>
 
-</context>
+</configuration>
