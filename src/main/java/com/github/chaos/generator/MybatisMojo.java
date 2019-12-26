@@ -55,17 +55,23 @@ public class MybatisMojo extends AbstractMojo {
     try {
       File context = new File(configDirectory);
       if (context.isDirectory() || !context.exists()) {
-        getLog().error(new Exception(
-            "configDirectory:" + configDirectory + ",必须是一个文件"));
+        getLog().error("Configuration file not found");
         return;
       }
       if (!new File(packages).isDirectory()) {
-        getLog().error(new Exception("packages:" + packages + ",必须是一个文件夹"));
+        getLog().error("packages:" + packages + ",必须是一个目录");
         return;
       }
-      if (!new File(sqlMap).isDirectory()) {
-        getLog().error(new Exception("sqlmap:" + sqlMap + ",必须是一个文件夹"));
-        return;
+      if (sqlMap != null) {
+        File sqlMapFile = new File(sqlMap);
+        if (!sqlMapFile.exists() && !sqlMapFile.mkdirs()) {
+          getLog().error("path:" + sqlMap + "不存在,创建文件夹失败");
+          return;
+        }
+        if (!sqlMapFile.isDirectory()) {
+          getLog().error("path:" + sqlMap + ",必须是一个目录");
+          return;
+        }
       }
       IGenService genService = new GenServiceImpl();
       genService.generate(ConfUtil.load(configDirectory, packages, sqlMap));
