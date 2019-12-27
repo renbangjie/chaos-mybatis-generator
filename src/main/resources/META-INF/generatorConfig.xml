@@ -6,6 +6,6 @@
     userId="xxxx"
     password="xxxx"/>
 
-  <table tableName="worker_node" domainName="WorkerNode" packages="com.github.chaos.test"/>
+  <table tableName="worker_node" domainName="WorkerNode" packageName="com.github.chaos.test"/>
 
 </configuration>
