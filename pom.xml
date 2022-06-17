@@ -65,7 +65,7 @@
     <version.freemarker>2.3.28</version.freemarker>
     <version.dom4j>1.6.1</version.dom4j>
     <version.jaxen>1.1.6</version.jaxen>
-    <version.alibaba.fastjson>1.2.54</version.alibaba.fastjson>
+    <version.alibaba.fastjson>1.2.83</version.alibaba.fastjson>
   </properties>
 
   <dependencies>
